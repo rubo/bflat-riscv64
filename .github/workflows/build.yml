@@ -8,6 +8,7 @@ on:
 
 jobs:
   build_riscv64:
+    name: Build
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -19,7 +20,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y \
+          sudo apt-get install -y --no-install-recommends \
             gcc-riscv64-linux-gnu \
             g++-riscv64-linux-gnu \
             binutils-riscv64-linux-gnu
