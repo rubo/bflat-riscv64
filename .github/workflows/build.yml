@@ -21,8 +21,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends \
-            gcc-riscv64-linux-gnu \
-            g++-riscv64-linux-gnu
+            gcc-riscv64-linux-gnu
 
       - name: Build modules
         run: ./build.sh modules riscv64
